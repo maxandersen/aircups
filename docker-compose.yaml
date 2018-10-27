@@ -6,8 +6,8 @@ services:
       volumes:
         - ./config:/config
         - ./spool:/var/spool/cups-pdf
-        - ./services:/services
-        #- /etc/avahi/services:/services
+        #- ./services:/services
+        - /etc/avahi/services:/services
         
       restart: always
       expose:
