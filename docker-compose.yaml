@@ -10,6 +10,9 @@ services:
         - /etc/avahi/services:/services
         
       restart: always
+      environment:
+        CUPSADMIN: "${CUPSADMIN}"
+        CUPSPASSWORD: "${CUPSPASSWORD}"
       expose:
          - 631
       ports:
